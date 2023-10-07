@@ -10,7 +10,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600;700&family=M+PLUS+Code+Latin:wght@300;400;500&display=swap"
+			href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&family=M+PLUS+Code+Latin:wght@300&display=swap"
 			rel="stylesheet"
 		/>
 		<!-- Font Awesome -->
@@ -21,7 +21,7 @@
 	</head>
 	<body>
 		<!-- === HEADER ================================================================================================ -->
-		<header>
+		<header id="header">
 			<div class="logo-container">
 				<a href="#home" class="logo-link">
 					<img
@@ -120,21 +120,70 @@
 			<article class="hero__right">
 				<h1>Hello,</h1>
 				<h1>
-					My name is <span>Iosif Burca</span>, a Full Stack Developer <span><img src="./assets/icons/coding.png" alt=""></span>
+					My name is <span>Iosif Burca</span>, a Full Stack Developer
+					<span><img src="./assets/icons/coding.png" alt="" /></span>
 				</h1>
 				<h2>
 					I breathe life into pixels and code, conjuring captivating
 					digital experiences through web development magic.
 				</h2>
-                <a class="action-btn" href="#">
-                    <!-- <div class="action-text">See my work</div> -->
-                    <!-- <i class="fa-solid fa-angles-down"></i> -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
-                        <path d="M41.7375 36.1958L37.9167 39.8417V23.3333C37.9167 22.5598 37.6094 21.8179 37.0624 21.2709C36.5154 20.724 35.7735 20.4167 35 20.4167C34.2264 20.4167 33.4846 20.724 32.9376 21.2709C32.3906 21.8179 32.0833 22.5598 32.0833 23.3333V39.6375L28.3208 35.8458C27.7716 35.2966 27.0267 34.9881 26.25 34.9881C25.4733 34.9881 24.7284 35.2966 24.1792 35.8458C23.6299 36.395 23.3214 37.1399 23.3214 37.9167C23.3214 38.6934 23.6299 39.4383 24.1792 39.9875L32.9292 48.7375C33.2065 49.003 33.5336 49.2112 33.8917 49.35C34.2408 49.5043 34.6183 49.584 35 49.584C35.3817 49.584 35.7592 49.5043 36.1083 49.35C36.2798 49.2809 36.4378 49.1822 36.575 49.0583C36.7376 48.989 36.886 48.8901 37.0125 48.7667L45.7625 40.425C46.3233 39.8912 46.6491 39.1566 46.6683 38.3826C46.6874 37.6086 46.3983 36.8587 45.8646 36.2979C45.3308 35.7371 44.5962 35.4113 43.8222 35.3921C43.0482 35.373 42.2983 35.6621 41.7375 36.1958Z" fill="#28E98C"/>
-                        <path d="M35 5.83333C29.2314 5.83333 23.5923 7.54393 18.7959 10.7488C13.9994 13.9537 10.2611 18.5089 8.05351 23.8384C5.84595 29.1679 5.26835 35.0324 6.39376 40.6901C7.51916 46.3479 10.297 51.5449 14.376 55.6239C18.4551 59.703 23.6521 62.4808 29.3099 63.6062C34.9676 64.7316 40.8321 64.154 46.1616 61.9465C51.4911 59.7389 56.0463 56.0006 59.2512 51.2041C62.4561 46.4077 64.1667 40.7686 64.1667 35C64.1667 31.1698 63.4122 27.3771 61.9465 23.8384C60.4807 20.2997 58.3323 17.0844 55.6239 14.3761C52.9156 11.6677 49.7003 9.51927 46.1616 8.05351C42.6229 6.58775 38.8302 5.83333 35 5.83333ZM35 58.3333C30.3851 58.3333 25.8738 56.9649 22.0367 54.401C18.1995 51.8371 15.2088 48.1929 13.4428 43.9293C11.6768 39.6657 11.2147 34.9741 12.115 30.4479C13.0153 25.9217 15.2376 21.7641 18.5008 18.5008C21.7641 15.2376 25.9217 13.0153 30.4479 12.115C34.9741 11.2147 39.6657 11.6768 43.9293 13.4428C48.1929 15.2089 51.837 18.1995 54.4009 22.0367C56.9648 25.8738 58.3333 30.3851 58.3333 35C58.3333 41.1884 55.875 47.1233 51.4991 51.4992C47.1233 55.875 41.1884 58.3333 35 58.3333Z" fill="#28E98C"/>
-                      </svg>
-                </a>
+				<a class="action-btn" href="#">
+					<!-- <div class="action-text">See my work</div> -->
+					<!-- <i class="fa-solid fa-angles-down"></i> -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="70"
+						height="70"
+						viewBox="0 0 70 70"
+						fill="none"
+					>
+						<path
+							d="M41.7375 36.1958L37.9167 39.8417V23.3333C37.9167 22.5598 37.6094 21.8179 37.0624 21.2709C36.5154 20.724 35.7735 20.4167 35 20.4167C34.2264 20.4167 33.4846 20.724 32.9376 21.2709C32.3906 21.8179 32.0833 22.5598 32.0833 23.3333V39.6375L28.3208 35.8458C27.7716 35.2966 27.0267 34.9881 26.25 34.9881C25.4733 34.9881 24.7284 35.2966 24.1792 35.8458C23.6299 36.395 23.3214 37.1399 23.3214 37.9167C23.3214 38.6934 23.6299 39.4383 24.1792 39.9875L32.9292 48.7375C33.2065 49.003 33.5336 49.2112 33.8917 49.35C34.2408 49.5043 34.6183 49.584 35 49.584C35.3817 49.584 35.7592 49.5043 36.1083 49.35C36.2798 49.2809 36.4378 49.1822 36.575 49.0583C36.7376 48.989 36.886 48.8901 37.0125 48.7667L45.7625 40.425C46.3233 39.8912 46.6491 39.1566 46.6683 38.3826C46.6874 37.6086 46.3983 36.8587 45.8646 36.2979C45.3308 35.7371 44.5962 35.4113 43.8222 35.3921C43.0482 35.373 42.2983 35.6621 41.7375 36.1958Z"
+							fill="#28E98C"
+						/>
+						<path
+							d="M35 5.83333C29.2314 5.83333 23.5923 7.54393 18.7959 10.7488C13.9994 13.9537 10.2611 18.5089 8.05351 23.8384C5.84595 29.1679 5.26835 35.0324 6.39376 40.6901C7.51916 46.3479 10.297 51.5449 14.376 55.6239C18.4551 59.703 23.6521 62.4808 29.3099 63.6062C34.9676 64.7316 40.8321 64.154 46.1616 61.9465C51.4911 59.7389 56.0463 56.0006 59.2512 51.2041C62.4561 46.4077 64.1667 40.7686 64.1667 35C64.1667 31.1698 63.4122 27.3771 61.9465 23.8384C60.4807 20.2997 58.3323 17.0844 55.6239 14.3761C52.9156 11.6677 49.7003 9.51927 46.1616 8.05351C42.6229 6.58775 38.8302 5.83333 35 5.83333ZM35 58.3333C30.3851 58.3333 25.8738 56.9649 22.0367 54.401C18.1995 51.8371 15.2088 48.1929 13.4428 43.9293C11.6768 39.6657 11.2147 34.9741 12.115 30.4479C13.0153 25.9217 15.2376 21.7641 18.5008 18.5008C21.7641 15.2376 25.9217 13.0153 30.4479 12.115C34.9741 11.2147 39.6657 11.6768 43.9293 13.4428C48.1929 15.2089 51.837 18.1995 54.4009 22.0367C56.9648 25.8738 58.3333 30.3851 58.3333 35C58.3333 41.1884 55.875 47.1233 51.4991 51.4992C47.1233 55.875 41.1884 58.3333 35 58.3333Z"
+							fill="#28E98C"
+						/>
+					</svg>
+				</a>
 			</article>
 		</section>
+
+		<section class="about-me" id="about">
+			<div class="about-image-container">
+				<img src="./assets/img/scroll.png" alt="" />
+			</div>
+			<div class="about-content">
+                <h2>About me</h2>
+			<div class="about-text">
+                <p>
+                    Greetings! I'm Iosif Burca, a versatile web developer on a
+                    perpetual journey of exploration and creation.
+                </p>
+    
+                <p>
+                    In the expansive landscape of technology and web development, I
+                    approach each project with boundless enthusiasm and a commitment
+                    to continuous learning and I view every challenge as an
+                    opportunity to grow and refine my skills. I'm excited to
+                    collaborate, learn from experienced professionals, and
+                    contribute meaningfully to the ever-evolving world of web
+                    development.
+                </p>
+                    
+                <p>
+                    Beyond the screen, my world expands into the realms of sci-fi
+                    movies, where I find inspiration in futuristic landscapes and
+                    narratives. Strategy games, especially Europa Universalis 4,
+                    fuel my analytical mind and strategic thinking.
+                    Choose-Your-Own-Adventure (CYOA) games and a good book are my
+                    companions in the pursuit of immersive storytelling.
+                </p>
+            </div>
+            </div>
+		</section>
+
+		<script src="script.js"></script>
 	</body>
 </html>

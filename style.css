@@ -1,239 +1,289 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 :root {
-    --dark: #212529;
-    --green: #28E98C;
-    --white: #e5e7eb;
+	--dark: #212529;
+	--green: #28e98c;
+	--white: #e5e7eb;
 }
 
 body {
-    background-color: var(--dark);
+	background-color: var(--dark);
+	color: var(--white);
 }
 
 /* ============================================================================== HEADER ================================ */
 
 header {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 15vh;
+	z-index: 5;
+    transition: .5s ease;
+}
+.colored-header {
+    background-color: darkslategray;
+    transition: .5s ease;
 }
 
 .logo-img {
-    width: 20vw;
-    padding: 3vh 1vw 3vh 10vw;
+	width: 20vw;
+	padding: 3vh 1vw 3vh 10vw;
 }
 
 nav {
-    padding: 3vh 10vw 3vh 1vw;
+	padding: 3vh 10vw 3vh 1vw;
 }
 
 ul {
-    list-style-type: none;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+	list-style-type: none;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
 }
 
 li a {
-    text-decoration: none;
-    padding: 2vh 1vw;
-    color: var(--white);
-    font-size: 1.3em;
-    font-family: "AR One Sans", sans-serif;
+	text-decoration: none;
+	padding: 2vh 1vw;
+	color: var(--white);
+	font-size: 1.3em;
+	font-family: 'AR One Sans', sans-serif;
 }
 
 li a:hover {
-    color: var(--green);
+	color: var(--green);
 }
-
 
 /* =============================================================================== HERO SECTION ========================= */
 
 .hero {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: flex-end;
-    margin: 5vh 10vw;
-    gap: 10%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	gap: 10%;
+	height: 100vh;
+	padding: 15vh 10vw 5vh 10vw;
 }
 
 .hero__left {
-    /* border: 1px solid blue; */
+	/* border: 1px solid blue; */
 }
 
 .hero__left__img-container {
-    width: 400px;
-    height: fit-content;
-    position: relative;
-    overflow: hidden;
+	width: 400px;
+	height: fit-content;
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
 }
 
 .hero__left__img-bg {
-    width: 400px;
-    height: 400px;
-    background-color: var(--green);
-    border-radius: 50%;
-    position: absolute;
-    top: 20%;
-    z-index: 1;
-    transition: .5s ease;
+	width: 400px;
+	height: 400px;
+	background-color: var(--green);
+	border-radius: 50%;
+	position: absolute;
+	top: 20%;
+	z-index: 1;
+	transition: 0.5s ease;
 }
 
 .hero__left__icon {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    z-index: 2;
-    opacity: 0;
-    transition: .5s ease;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	z-index: 2;
+	opacity: 0;
+	transition: 0.5s ease;
 }
 .hero__react {
-    top: 55%;
-    right: 30px;
+	top: 55%;
+	right: 30px;
 }
 .hero__html {
-    top: 35%;
-    right: 50px;
-
+	top: 35%;
+	right: 50px;
 }
 .hero__js {
-    top: 45%;
-    right: 120px;
-    width: 32px;
-    height: 32px;
+	top: 45%;
+	right: 120px;
+	width: 32px;
+	height: 32px;
 }
 .hero__css {
-    top: 20%;
-    right: 110px;
+	top: 20%;
+	right: 110px;
 }
 .hero__php {
-    top: 80%;
-    right: 30px;
-
+	top: 80%;
+	right: 30px;
 }
 .hero__node {
-    top: 60%;
-    right: 80px;
-
+	top: 60%;
+	right: 80px;
 }
 .hero__left__img-container .profile-img {
-    position: relative;
-    width: 300px;
-    margin-left: 50px;
-    z-index: 2;
-    bottom: -10px;
-    transition: .5s ease;
+	position: relative;
+	width: 300px;
+	margin-left: 50px;
+	z-index: 2;
+	bottom: -10px;
+	transition: 0.5s ease;
 }
 
 .hero__left__img-container:hover .profile-img {
-    content: url("./assets/img/Iosif_Burca_Photo.png");
-    transform: translateX(-50px);
-    transition: .5s ease;
+	content: url('./assets/img/Iosif_Burca_Photo.png');
+	transform: translateX(-50px);
+	transition: 0.5s ease;
 }
 .hero__left__img-container:hover .hero__left__img-bg {
-    transform: scale(1.2);
-    transition: .5s ease;
+	transform: scale(1.2);
+	transition: 0.5s ease;
 }
 .hero__left__img-container:hover .hero__left__icon {
-    opacity: 1;
-    transition: .5s ease;
+	opacity: 1;
+	transition: 0.5s ease;
 }
 
 .hero__left__title {
-    font-family: 'M Plus Code Latin', monospace;
-    color: var(--white);
-    font-weight: 400;
-    text-align: center;
-    margin: 1.2em;
+	font-family: 'M Plus Code Latin', monospace;
+	color: var(--white);
+	font-weight: 400;
+	letter-spacing: 2px;
+	text-align: center;
+	margin: 1.2em;
 }
 .social-links-container {
-    text-align: center;
+	text-align: center;
 }
 .hero__left_socials {
-    text-decoration: none;
-    color: var(--green);
-    font-size: 2.5em;
-    margin: 0 .5em;
-    transition: .5s ease;
+	text-decoration: none;
+	color: var(--green);
+	font-size: 2.5em;
+	margin: 0 0.5em;
+	transition: 0.5s ease;
 }
 .resume-link {
-    text-align: center;
-    margin: 20px;
+	text-align: center;
+	margin: 20px;
 }
 .resume-link a {
-    text-decoration: none;
-    color: var(--dark);
-    background-color: var(--green);
-    padding: 8px 14px;
-    border-radius: 10px;
-    font-family: "AR One Sans", sans-serif;
-    font-size: 1.3em;
-    transition: .5s ease;
+	text-decoration: none;
+	color: var(--dark);
+	background-color: var(--green);
+	padding: 8px 14px;
+	border-radius: 10px;
+	font-family: 'AR One Sans', sans-serif;
+	font-size: 1.3em;
+	transition: 0.5s ease;
 }
 
 .hero__left_socials:hover {
-    color: var(--white);
-    transition: .5s ease;
+	color: var(--white);
+	transition: 0.5s ease;
 }
 
 .resume-link a:hover {
-    background-color: var(--white);
-    transition: .5s ease;
+	background-color: var(--white);
+	transition: 0.5s ease;
 }
 
 .hero__right {
-    /* border: 1px solid red; */
-    text-align: center;
+	/* border: 1px solid red; */
+	text-align: center;
 }
 .hero__right h1 {
-    font-size: 2.5em;
-    color: var(--white);
-    font-family: "AR One Sans", sans-serif;
-    font-weight: 300;
-    line-height: 1.5em;
-    text-align: left;
+	font-size: 2.5em;
+	color: var(--white);
+	font-family: 'AR One Sans', sans-serif;
+	font-weight: 300;
+	line-height: 1.5em;
+	text-align: left;
 }
 .hero__right h1 span {
-    color: var(--green);
-    text-transform: uppercase;
+	color: var(--green);
+	text-transform: uppercase;
 }
 .hero__right h1 span img {
-    width: 48px;
-    height: auto;
+	width: 48px;
+	height: auto;
 }
 .hero__right h2 {
-    font-size: 1.6em;
-    color: var(--green);
-    font-family: 'M Plus Code Latin', monospace;
-    font-weight: 300;
-    margin: 16px 0;
-    text-align: left;
+	font-size: 1.6em;
+	color: var(--green);
+	font-family: 'M Plus Code Latin', monospace;
+	font-weight: 300;
+	margin: 16px 0;
+	text-align: left;
 }
 
 .action-btn {
-    /* background-color: var(--green); */
-    padding: 8px 14px;
-    border-radius: 10px;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
-    color: var(--dark);
-    font-family: "AR One Sans", sans-serif;
-    font-size: 1.3em;
-    transition: .5s ease;
+	/* background-color: var(--green); */
+	padding: 8px 14px;
+	border-radius: 10px;
+	text-align: center;
+	display: inline-block;
+	text-decoration: none;
+	color: var(--dark);
+	font-family: 'AR One Sans', sans-serif;
+	font-size: 1.3em;
+	transition: 0.5s ease;
 }
 .action-btn .fa-angles-down {
-    font-size: 1.3em;
+	font-size: 1.3em;
 }
 .action-btn:hover {
-    /* background-color: var(--white); */
-    transform: scale(1.2);
-    transition: .5s ease;
+	/* background-color: var(--white); */
+	transform: scale(1.2);
+	transition: 0.5s ease;
+}
+
+.about-me {
+	font-family: 'AR One Sans', sans-serif;
+    padding: 15vh 10vw 5vh 10vw;
+    text-align: center;
+    position: relative;
+}
+.about-me h2 {
+	text-align: center;
+	text-transform: capitalize;
+	padding: 3vh;
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--dark);
+}
+.about-content {
+    position: absolute;
+    top: 30vh;
+    left: 25vw;
+}
+.about-text {
+    width: 50vw;
+    margin: 0 auto;
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--dark);
+}
+.about-image-container {
+    height: 80vh;
+    width: 80vw;
+    text-align: center;
+}
+.about-image-container img {
+    width: 100%;
+    height: 100%;
 }
